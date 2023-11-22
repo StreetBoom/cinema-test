@@ -50,8 +50,8 @@
                                 <div class="col">
                                     <div class="card shadow-sm">
                                         <img
-                                            src="https://hdwpro.com/wp-content/uploads/2022/01/Simple-Black-Wallpaper-1366x768.jpg"
-                                            class="bd-placeholder-img card-img-top" alt="pizda">
+                                            src="{{$movie->image}}"
+                                            class="bd-placeholder-img card-img-top" alt="">
                                         <div class="card-body">
                                             <h6 class="card-text">{{$movie->name}}</h6>
                                             <p class="card-text">Режиссер: {{$movie->director->name}}</p>

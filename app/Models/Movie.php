@@ -27,6 +27,10 @@ class Movie extends Model
     {
         return $this->hasMany(Rating::class);
     }
+    public function galleries(): HasMany
+    {
+        return $this->hasMany(Gallery::class);
+    }
     public function director(): BelongsTo
     {
         return $this->belongsTo(Director::class);

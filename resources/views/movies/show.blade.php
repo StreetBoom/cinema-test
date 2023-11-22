@@ -17,9 +17,27 @@
                     <div class="container ">
                         <div class="col">
                             <div class="card shadow-sm">
-                                <img
-                                    src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614257532_3-p-sploshnoi-chernii-fon-4.jpg"
-                                    class="bd-placeholder-img card-img-top" alt="">
+                                <div id="carouselExample" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="{{$movie->image}}" class="d-block w-100" alt="...">
+                                        </div>
+                                        @foreach($movie->galleries as $gallery)
+                                            <div class="carousel-item">
+                                                <img src="{{$gallery->image}}" class="d-block w-100" alt="...">
+                                            </div>
+                                        @endforeach
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Предыдущий</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Следующий</span>
+                                    </button>
+                                </div>
                                 <div class="card-body">
                                     <h5 class="card-text">{{$movie->name}}</h5>
                                     <h6 class="card-text">Красткое описание фильма: {{$movie->description}}</h6>

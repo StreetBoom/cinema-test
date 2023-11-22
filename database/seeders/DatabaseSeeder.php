@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Actor;
 use App\Models\Director;
+use App\Models\Gallery;
 use App\Models\Movie;
 use Illuminate\Database\Seeder;
 
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
         Director::factory(15)->create();
         Actor::factory(50)->create();
         Movie::factory(100)->create();
+        Gallery::factory(200)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
